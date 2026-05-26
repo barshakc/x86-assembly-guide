@@ -53,10 +53,10 @@ syscall
 
 ### Explanation
 
-rax = 1 → write operation
-rdi = 1 → output to terminal
-rsi → message location
-rdx → message length
+- rax = 1 → write operation
+- rdi = 1 → output to terminal
+- rsi → message location
+- rdx → message length
 
 ## Reading Input (sys_read)
 
@@ -69,24 +69,27 @@ mov rsi, buffer ; where input is stored
 mov rdx, 100    ; maximum bytes to read
 syscall
 ```
+
 ### Explanation
 
-rax = 0 → read operation
-rdi = 0 → input from keyboard
-rsi → buffer
-rdx → number of bytes to read
+- rax = 0 → read operation
+- rdi = 0 → input from keyboard
+- rsi → buffer
+- rdx → number of bytes to read
 
 ## Exiting a Program (sys_exit)
 
 ### Example
 
+```asm
 mov rax, 60     ; sys_exit
 mov rdi, 0      ; exit status
+```
 
 ### Explanation
 
-rax = 60 → exit program
-rdi = 0 → return value (0 = success)
+- rax = 60 → exit program
+- rdi = 0 → return value (0 = success)
 
 ## Notes
 
