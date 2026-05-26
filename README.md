@@ -38,6 +38,6 @@ ld file.o -o file
 
 ## 📌 Notes
 
-Examples are intentionally minimal and focused
-Each program demonstrates a specific concept
-There is no abstraction — everything maps directly to system-level behavior
+- Examples are intentionally minimal and focused
+- Each program demonstrates a specific concept
+- There is no abstraction — everything maps directly to system-level behavior
