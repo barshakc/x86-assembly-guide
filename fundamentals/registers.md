@@ -62,7 +62,7 @@ Registers are also used to pass arguments:
 
 ## Notes
 
-Registers are much faster than memory
-Most operations are performed using registers
-Some registers have conventional roles, but can still be used generally
-Proper register usage is essential for correct program behavior
+- Registers are much faster than memory
+- Most operations are performed using registers
+- Some registers have conventional roles, but can still be used generally
+- Proper register usage is essential for correct program behavior
