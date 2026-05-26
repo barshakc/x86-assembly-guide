@@ -65,7 +65,7 @@ _start:
 
 - global _start → makes _start visible to the linker
 - _start → entry point of the program
-- execution begins from this label
+- execution begins from this label when the program starts
 
 ## Full Example
 
@@ -75,13 +75,13 @@ section .data
     len equ $ - msg
 
 section .bss
-    buffer resb 100
+    ; no variables used here
 
 section .text
     global _start
 
 _start:
-    ; write message
+    ; write message (sys_write)
     mov rax, 1
     mov rdi, 1
     mov rsi, msg
@@ -90,9 +90,16 @@ _start:
 
     ; exit
     mov rax, 60
-    xor rdi, rdi
+    mov rdi, 0
     syscall
 ```
+
+## Flow
+
+.data  → stores values  
+.bss   → reserves memory  
+.text  → executes instructions  
+``
 
 ## Notes
 
@@ -100,4 +107,5 @@ _start:
 - Execution always starts from _start
 - .data and .bss are optional but commonly used
 - .text is required for program logic
+- The assembler and linker rely on this structure to generate executable code
 
