@@ -4,13 +4,13 @@ A practical guide to x86-64 assembly with explanations and runnable examples usi
 
 ---
 
-##  Quick Start
+## Quick Start
 
 ```bash
 nasm -f elf64 examples/hello_world.asm
 ld hello_world.o -o hello
 ./hello
-``
+```
 
 ## 🧠 Overview
 
@@ -34,7 +34,8 @@ Linux environment or WSL
 nasm -f elf64 file.asm
 ld file.o -o file
 ./file
-``
+```
+
 ## 📌 Notes
 
 Examples are intentionally minimal and focused
